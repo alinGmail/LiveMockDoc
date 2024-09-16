@@ -88,6 +88,10 @@ const config: Config = {
               label: "Tutorial",
               to: "/docs/intro",
             },
+            {
+              label: "Install",
+              to: "/docs/install.md",
+            },
           ],
         },
         {
@@ -111,17 +115,13 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/alinGmail/LiveMock",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
