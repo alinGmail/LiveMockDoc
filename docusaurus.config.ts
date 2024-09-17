@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "LiveMock",
-  tagline: "api mock tool",
+  tagline: "easy to mock",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -85,12 +85,12 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Getting Start",
               to: "/docs/intro",
             },
             {
               label: "Install",
-              to: "/docs/install.md",
+              to: "/docs/install",
             },
           ],
         },
