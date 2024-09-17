@@ -16,6 +16,16 @@ The matcher consists of three parts: match-type, comparator, and value. These th
 - `query`: the parameters in the request URL
 - `param`: the parameters in the request body
 
+
+livemock has 12 matcher comparator, which are:
+  - `IS`: 
+  - `IS_NOT`: the method of the request, such as GET, POST, PUT, etc.
+  - `CONTAINS`: the method of the request, such as GET, POST, PUT, etc.
+  - `NOT_CONTAINS`: the method of the request, such as GET, POST, PUT, etc.
+
+
+
+
 Here are some examples of matchers:
 
 - `path START_WITH /book/`: matches all request paths that start with `/book/`.
