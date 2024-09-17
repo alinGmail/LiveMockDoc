@@ -8,7 +8,7 @@ after create the expectation, in the expectation page, click the 'Add Matcher' b
 
 ### config the matcher
 
-The matcher consists of three parts: match-type, comparator, and value. These three parts determine whether a request can be matched. Now livemock supports five match types, which are:
+The matcher consists of three parts: match-type, comparator, and match-value. These three parts determine whether a request can be matched. Now livemock supports five match types, which are:
 
 - `method`: the method of the request, such as GET, POST, PUT, etc.
 - `path`: the path of the request, the path is start with `/`,like `/student/123`
@@ -16,15 +16,20 @@ The matcher consists of three parts: match-type, comparator, and value. These th
 - `query`: the parameters in the request URL
 - `param`: the parameters in the request body
 
+livemock has many matcher comparator, which are:
 
-livemock has 12 matcher comparator, which are:
-  - `IS`: 
-  - `IS_NOT`: the method of the request, such as GET, POST, PUT, etc.
-  - `CONTAINS`: the method of the request, such as GET, POST, PUT, etc.
-  - `NOT_CONTAINS`: the method of the request, such as GET, POST, PUT, etc.
-
-
-
+- `IS`: the request value is equal to the match value.
+- `IS_NOT`: the request value is not equal to the match value.
+- `CONTAINS`: the request value contain the match value.
+- `NOT_CONTAINS`: the request value not contain the match value.
+- `START_WITH`: the request value start with the match value.
+- `END_WITH`: the request value end with the match value.
+- `MATCH_REGEX`: the request value match the match value as a regex.
+- `NOT_MATCH_REGEX`: the request value not match the match value as a regex.
+- `SHOWED`: the request value was showed.
+- `NOT_SHOWED`: the request value was not showed.
+- `MATCH_GLOB`: the request value match the match value as a [glob pattern](<https://en.wikipedia.org/wiki/Glob_(programming)>).
+- `NO_MATCH_GLOB`: the request value match the match value as a [glob pattern](<https://en.wikipedia.org/wiki/Glob_(programming)>).
 
 Here are some examples of matchers:
 
