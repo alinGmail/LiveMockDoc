@@ -11,7 +11,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Easy to use",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    Svg: require("@site/static/img/user-interface.svg").default,
     description: (
       <>
         LiveMock has a simple, good-looking user interface. Anyone can use it
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Dynamic mocking",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    Svg: require("@site/static/img/start-up.svg").default,
     description: (
       <>
         Change API responses instantly without restarting the server. You can
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Logging and analytics",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/data-collection.svg").default,
     description: (
       <>
         LiveMock records every API request. Use filters to sort through logs
