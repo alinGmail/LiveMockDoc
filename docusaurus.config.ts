@@ -58,10 +58,10 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "LiveMock",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg",
+        src: "img/icon_128x128.png",
       },
       items: [
         {
@@ -70,9 +70,8 @@ const config: Config = {
           position: "left",
           label: "Tutorial",
         },
-        { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/alinGmail/LiveMock",
           label: "GitHub",
           position: "right",
         },
@@ -89,7 +88,7 @@ const config: Config = {
               to: "/docs/intro",
             },
             {
-              label: "Install",
+              label: "Installation",
               to: "/docs/install",
             },
           ],
