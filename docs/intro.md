@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # 🚀 Getting Started
 
-LiveMock is a comprehensive tool for API development and testing, offering mock data, request proxying, and logging, to streamline workflows and track traffic.
+LiveMock is an api mock tool, offering mock data, request proxying, and logging, to streamline workflows and track traffic.
+
+![livemockDesktop](../static/img/light1.png)
 
 # ✨ Features
 

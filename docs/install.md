@@ -25,6 +25,14 @@ cd LiveMock
 yarn install
 ```
 
+:::tip[tip]
+
+If you are within China, you can run the following command before 'yarn install' to set the ELECTRON MIRROR.
+
+> yarn config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/
+
+:::
+
 #### 3.build the forntEnd code
 
 ```
