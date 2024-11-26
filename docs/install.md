@@ -12,10 +12,16 @@ To install the desktop version, simply download from the [release page](https://
 
 ### Installation of the web service version
 
+#### 1.This project uses Yarn Workspaces, so you need to enable corepack.
+
+```
+corepack enable
+```
+
 #### 1.clone the project
 
 ```
-git clone git@github.com:alinGmail/LiveMock.git
+git clone https://github.com/alinGmail/LiveMock.git
 ```
 
 #### 2.install dependencies
@@ -27,22 +33,21 @@ yarn install
 
 :::tip[tip]
 
-If you are within China, you can run the following command before 'yarn install' to set the ELECTRON MIRROR.
-
-> yarn config set ELECTRON_MIRROR https://npmmirror.com/mirrors/electron/
+If you are in China, you can set the ELECTRON_MIRROR environment variables to
+https://npmmirror.com/mirrors/electron/
 
 :::
 
 #### 3.build the forntEnd code
 
 ```
-yarn workspace front-end build
+yarn run web-build
 ```
 
 #### 4.run the project
 
 ```
-yarn workspace back-end start
+yarn run web-start
 ```
 
 the server will running at http://localhost:9002
