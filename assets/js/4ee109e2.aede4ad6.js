@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklive_mock_ts=self.webpackChunklive_mock_ts||[]).push([[0],{1128:e=>{e.exports=JSON.parse('{"label":"hola","permalink":"/LiveMockDoc/blog/tags/hola","allTagsPath":"/LiveMockDoc/blog/tags","count":1,"unlisted":false}')}}]);

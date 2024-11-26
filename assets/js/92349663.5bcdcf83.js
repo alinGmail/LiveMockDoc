@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklive_mock_ts=self.webpackChunklive_mock_ts||[]).push([[555],{8165:e=>{e.exports=JSON.parse('{"permalink":"/LiveMockDoc/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
