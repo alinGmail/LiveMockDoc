@@ -2,43 +2,73 @@
 sidebar_position: 2
 ---
 
-### How to create matcher
+# Matchers
 
-after create the expectation, in the expectation page, click the 'Add Matcher' button in the matchers column.
+A matcher is one condition on the incoming request. All matchers of an expectation must succeed; if one of them fails,
+the expectation is skipped and the next one is tried.
 
-### config the matcher
+## Creating a matcher
 
-The matcher consists of three parts: match-type, comparator, and match-value. These three parts determine whether a request can be matched. Now livemock supports five match types, which are:
+In the Expectation detail view, click the pencil on the **Matchers** card, then **Add matcher**.
 
-- `method`: the method of the request, such as GET, POST, PUT, etc.
-- `path`: the path of the request, the path is start with `/`,like `/student/123`
-- `header`: the headers of the request
-- `query`: the parameters in the request URL
-- `param`: the parameters in the request body
+![Edit matchers](/img/screenshots/06-matchers.png)
 
-livemock has many matcher comparator, which are:
+Each row is one matcher and has three parts:
 
-- `IS`: the request value is equal to the match value.
-- `IS_NOT`: the request value is not equal to the match value.
-- `CONTAINS`: the request value contain the match value.
-- `NOT_CONTAINS`: the request value not contain the match value.
-- `START_WITH`: the request value start with the match value.
-- `END_WITH`: the request value end with the match value.
-- `MATCH_REGEX`: the request value match the match value as a regex.
-- `NOT_MATCH_REGEX`: the request value not match the match value as a regex.
-- `SHOWED`: the request value was showed.
-- `NOT_SHOWED`: the request value was not showed.
-- `MATCH_GLOB`: the request value match the match value as a [glob pattern](<https://en.wikipedia.org/wiki/Glob_(programming)>).
-- `NO_MATCH_GLOB`: the request value match the match value as a [glob pattern](<https://en.wikipedia.org/wiki/Glob_(programming)>).
+1. **Type** - which part of the request is inspected.
+2. **Comparator** - how the value is compared.
+3. **Value** - what it is compared with. Matchers with a name (`header`, `query`, `param`) also have a **name** field.
 
-Here are some examples of matchers:
+Changes are applied when you click **Save**.
 
-- `path START_WITH /book/`: matches all request paths that start with `/book/`.
-- `query teacher_name CONTAINS tom`: matches all requests that have a `teacher_name` query parameter, and the value of the `teacher_name` query parameter contains "tom".
-- `param teacher_name IS tom`: matches all requests that have a body, and the body has a `teacher_name` parameter,value is `tom`. For example, a request with a JSON body like the one below:
+## Matcher types
 
-```json
-{
-  "teacher_name": "tom"
-}
-```
+| Type | Inspects | Example value |
+| --- | --- | --- |
+| `method` | The HTTP method of the request. | `POST` |
+| `path` | The path of the request, always starting with `/`. | `/api/login` |
+| `header` | A request header, selected by its name. | name `Authorization`, value `Bearer` |
+| `query` | A query parameter, selected by its name. | name `page`, value `2` |
+| `param` | A field of the request body, selected by its name. Works for JSON bodies and form bodies. | name `username`, value `tom` |
+
+:::info[Methods are compared case-insensitively]
+
+The `method` value is upper-cased before it is compared, so `post`, `Post` and `POST` all match a `POST` request.
+
+:::
+
+## Comparators
+
+| Comparator | Succeeds when |
+| --- | --- |
+| `IS` | The request value equals the matcher value. |
+| `IS_NOT` | The request value differs from the matcher value. |
+| `CONTAINS` | The request value contains the matcher value. |
+| `NOT_CONTAINS` | The request value does not contain the matcher value. |
+| `START_WITH` | The request value starts with the matcher value. |
+| `END_WITH` | The request value ends with the matcher value. |
+| `MATCH_REGEX` | The request value matches the matcher value read as a regular expression. |
+| `NOT_MATCH_REGEX` | The request value does not match the regular expression. |
+| `SHOWED` | The name is present on the request (a header, a query parameter or a body field). No value needed. |
+| `NOT_SHOWED` | The name is absent from the request. No value needed. |
+| `MATCH_GLOB` | The request value matches the matcher value read as a [glob pattern](<https://en.wikipedia.org/wiki/Glob_(programming)>), for example `/users/*`. |
+| `NO_MATCH_GLOB` | The request value does not match the glob pattern. |
+
+For `SHOWED` and `NOT_SHOWED` the **value** field is not used - only the name matters. They are handy to tell apart
+requests that carry an optional parameter from requests that do not, for example `query page SHOWED`.
+
+## Examples
+
+- `path START_WITH /book/` matches every path that starts with `/book/`.
+- `query teacher_name CONTAINS tom` matches requests whose `teacher_name` query parameter contains "tom".
+- `param teacher_name IS tom` matches requests whose body contains `teacher_name` with the value `tom`:
+
+  ```json
+  {
+    "teacher_name": "tom"
+  }
+  ```
+
+- `path MATCH_GLOB /users/*` matches `/users/1`, `/users/42` and `/users/jane`, but not `/users/1/posts`.
+- `header Authorization SHOWED` matches requests that send an `Authorization` header, whatever its value.
+- `method IS_NOT DELETE` matches everything except `DELETE` requests.

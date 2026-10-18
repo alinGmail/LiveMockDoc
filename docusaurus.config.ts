@@ -8,7 +8,7 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://alinGmail.github.io",
+  url: "https://alingmail.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/LiveMockDoc/",
@@ -19,7 +19,12 @@ const config: Config = {
   projectName: "LiveMockDoc", // Usually your repo name.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -38,14 +43,14 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/alinGmail/LiveMockDoc/tree/main/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/alinGmail/LiveMockDoc/tree/main/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -84,18 +89,35 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Getting Start",
+              label: "Getting Started",
               to: "/docs/intro",
             },
             {
               label: "Installation",
               to: "/docs/install",
             },
+            {
+              label: "Quick Start",
+              to: "/docs/quick-start",
+            },
+            {
+              label: "Request Log",
+              to: "/docs/request-log",
+            },
           ],
         },
         {
-          title: "Community",
-          items: [],
+          title: "Deployment",
+          items: [
+            {
+              label: "Authentication",
+              to: "/docs/auth",
+            },
+            {
+              label: "Configuration",
+              to: "/docs/configuration",
+            },
+          ],
         },
         {
           title: "More",

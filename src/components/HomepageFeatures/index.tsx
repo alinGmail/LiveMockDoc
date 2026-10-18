@@ -14,9 +14,9 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/user-interface.svg").default,
     description: (
       <>
-        LiveMock has a simple, good-looking user interface. Anyone can use it
-        easily. It works on the web, Windows, and Mac. You can choose the
-        version you like best
+        A self-hosted dashboard anyone can pick up in minutes. Match requests
+        on method, path, headers, query and body, in groups with their own
+        priority. Run it in Docker or from source.
       </>
     ),
   },
@@ -25,8 +25,9 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/start-up.svg").default,
     description: (
       <>
-        Change API responses instantly without restarting the server. You can
-        update mock data on the fly
+        Change API responses instantly without restarting the server. Return
+        custom JSON or Mock.js templates, proxy to a real backend (WebSocket
+        included), or serve a folder from disk.
       </>
     ),
   },
@@ -35,9 +36,9 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/data-collection.svg").default,
     description: (
       <>
-        LiveMock records every API request. Use filters to sort through logs
-        easily. Customize which data you want to see. View data in a JSON tree
-        format for better understanding
+        Every request is recorded. Filter with presets or custom JSON paths,
+        choose the columns you need, read WebSocket messages, and turn any
+        captured request into a mock in one click.
       </>
     ),
   },
