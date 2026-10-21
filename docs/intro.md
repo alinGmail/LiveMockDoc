@@ -43,7 +43,7 @@ action and whose matchers all succeed wins. The order is described in [Expectati
 
 ## 📚 Where to go next
 
-- [Installation](./install.md) - run LiveMock with Docker or from source.
+- [Installation](./install.md) - run LiveMock with `npx livemock`, Docker, or from source.
 - [Quick Start](./quick-start.md) - from first sign-in to your first mocked response.
 - [Expectations](./expectation/create-an-expectation.md), [Matchers](./expectation/create-a-matcher.md),
   [Actions](./expectation/create-an-action.md), [Groups](./group.md).

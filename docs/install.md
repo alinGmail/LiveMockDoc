@@ -14,7 +14,40 @@ LiveMock comes in two flavours:
 
 ## 🌐 Web version
 
-### Option A - Docker
+### Option A - npm
+
+The web server and its dashboard are published to npm as
+[`livemock`](https://www.npmjs.com/package/livemock), so there is nothing to clone or build. Node.js 18 or newer is
+required.
+
+Run it once without installing anything:
+
+```bash
+npx livemock
+```
+
+Or install it globally so the `livemock` command stays on your `PATH`:
+
+```bash
+npm install -g livemock
+livemock
+```
+
+Either way the server starts on `http://localhost:9002` and serves the dashboard at
+`http://localhost:9002/dashboard/`.
+
+The database is kept in a `db` directory **relative to the directory you start LiveMock from**, so pick a stable
+working directory (or set `LIVEMOCK_DB_PATH` to an absolute path, for example
+`LIVEMOCK_DB_PATH=/var/lib/livemock npx livemock`). Otherwise, starting from a different directory opens a fresh,
+empty instance.
+
+`npx` reuses the cached copy on later runs. Append `@latest` - `npx livemock@latest` - to start the newest release
+instead, or run `npm install -g livemock@latest` to upgrade a global install.
+
+The same command also resets the account if you lose the password: `npx livemock reset-admin <new-username>`, with the
+server stopped. See [Authentication](./auth.md#recovering-a-lost-password).
+
+### Option B - Docker
 
 The repository contains a `Dockerfile` and a `docker-compose.yml`, so the whole build (core types, dashboard,
 server bundle) happens inside the image:
@@ -38,7 +71,7 @@ LIVEMOCK_PORT=8100 docker compose up
 The mock ports of your projects (8088 by default) must be published separately if you want to reach them from outside
 the container.
 
-### Option B - from source
+### Option C - from source
 
 LiveMock uses Yarn workspaces. Node.js 18 or newer is required; the repository pins Yarn 4 through `corepack`.
 

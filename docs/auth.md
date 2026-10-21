@@ -50,14 +50,21 @@ throttle sees the real client IP - see [Configuration](./configuration.md).
 
 ## Recovering a lost password
 
-There is no password reset e-mail. Stop the backend and reset the account from the command line:
+There is no password reset e-mail. The account can only be reset from the command line, and the backend must be
+stopped first (see the caution below). If you run LiveMock from npm, use:
+
+```bash
+npx livemock reset-admin <new-username>
+```
+
+Replace `npx` with `livemock` if you installed the package globally. From a source checkout, use:
 
 ```bash
 yarn workspace livemock reset-admin <new-username>
 ```
 
-You are prompted for the new password (hidden, entered twice). The command resets both the username and the password
-and invalidates all sessions. Start the backend again and sign in.
+You are prompted for the new password twice (hidden, once for the confirmation). The command resets both the username
+and the password and invalidates all sessions. Start the backend again and sign in.
 
 :::caution
 

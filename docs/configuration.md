@@ -14,11 +14,13 @@ The web version is configured through environment variables. There is no configu
 | `LIVEMOCK_COOKIE_SECURE` | `false` | Set to `true` when the dashboard is served over HTTPS so the session cookie is only sent over TLS. HTTPS itself is terminated by your reverse proxy. |
 | `LIVEMOCK_TRUST_PROXY` | *(unset)* | Comma-separated list of reverse-proxy IPs / CIDRs whose `X-Forwarded-For` header is trusted, for example `127.0.0.1,10.0.0.0/8`. Unset or `false` ignores forwarding headers entirely. A "trust everyone" mode is intentionally not supported, and an invalid entry stops the server at startup. |
 
-For example, to run on another port from source:
+For example, to run on another port:
 
 ```bash
-LIVEMOCK_PORT=8100 yarn web-start
+LIVEMOCK_PORT=8100 npx livemock
 ```
+
+(or `LIVEMOCK_PORT=8100 yarn web-start` from a source checkout.)
 
 or with Docker Compose:
 
