@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "当前版本",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Expectations": {
+    "message": "Expectation",
+    "description": "The label for category 'Expectations' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Request Log": {
+    "message": "请求记录",
+    "description": "The label for category 'Request Log' in sidebar 'tutorialSidebar'"
+  }
+}

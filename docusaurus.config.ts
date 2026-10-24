@@ -26,12 +26,19 @@ const config: Config = {
     },
   },
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "zh-Hans"],
+    localeConfigs: {
+      en: {
+        label: "English",
+        htmlLang: "en",
+      },
+      "zh-Hans": {
+        label: "简体中文",
+        htmlLang: "zh-Hans",
+      },
+    },
   },
 
   presets: [
@@ -74,6 +81,10 @@ const config: Config = {
           sidebarId: "tutorialSidebar",
           position: "left",
           label: "Tutorial",
+        },
+        {
+          type: "localeDropdown",
+          position: "right",
         },
         {
           href: "https://github.com/alinGmail/LiveMock",
