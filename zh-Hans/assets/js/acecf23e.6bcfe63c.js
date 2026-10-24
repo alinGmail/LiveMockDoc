@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklive_mock_ts||=[]).push([[1903],{1912(o){o.exports=JSON.parse('{"blogBasePath":"/LiveMockDoc/zh-Hans/blog","blogTitle":"\u535a\u5ba2","authorsListPath":"/LiveMockDoc/zh-Hans/blog/authors"}')}}]);
