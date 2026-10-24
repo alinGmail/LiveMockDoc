@@ -123,6 +123,19 @@ If you are in China, you can set the `ELECTRON_MIRROR` environment variable to
 The web server is configured with environment variables. The full list, including the reverse-proxy settings, is on the
 [Configuration](./configuration.md) page.
 
+### Connect an AI client (optional)
+
+The web version also ships an MCP server, so Claude Code, Cursor, OpenCode and other AI clients can manage LiveMock
+through their tools. Install it with one command, or use the manual client configuration:
+
+```bash
+npx add-mcp@2 livemock-mcp -g -a claude-code \
+  --env 'LIVEMOCK_URL=http://localhost:9002' \
+  --env 'LIVEMOCK_API_TOKEN=${LIVEMOCK_API_TOKEN}'
+```
+
+See the [MCP server](./mcp.md) page for token creation, other clients, read-only mode and troubleshooting.
+
 ## 🖥️ Desktop version
 
 Download the installer for your platform from the [release page](https://github.com/alinGmail/LiveMock/releases).

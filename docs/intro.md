@@ -26,6 +26,8 @@ API, records every request it receives, and lets you turn a captured request int
 - **Mock this request** - build a new expectation straight from a captured request, including matchers for its query
   parameters and body fields.
 - **Per-project mock port** - each project listens on its own port, so several projects can run side by side.
+- **MCP server** - connect Claude Code, Cursor, OpenCode or another AI client and manage projects, expectations,
+  groups and request logs from the editor.
 - **Web and desktop** - the same product is shipped as a self-hosted web dashboard and as a desktop application.
 
 ## 🧩 Concepts
@@ -48,4 +50,5 @@ action and whose matchers all succeed wins. The order is described in [Expectati
 - [Expectations](./expectation/create-an-expectation.md), [Matchers](./expectation/create-a-matcher.md),
   [Actions](./expectation/create-an-action.md), [Groups](./group.md).
 - [Request Log](./request-log/overview.md) - inspect, filter and reuse captured traffic.
+- [MCP server](./mcp.md) - connect Claude Code, Cursor, OpenCode or another AI client to LiveMock.
 - [Import OpenAPI / Postman](./import.md), [Authentication](./auth.md), [Configuration](./configuration.md).
