@@ -5,16 +5,10 @@ sidebar_position: 2
 
 # 🛠️ Installation
 
-LiveMock comes in two flavours:
+LiveMock runs as a self-hosted server that you open in a browser: a single process, it keeps its data on your server,
+and you can put it behind your own reverse proxy and HTTPS. Pick one of the options below.
 
-- **Web** - a self-hosted server you open in a browser. This is the recommended way to run LiveMock: it is a single
-  process, it keeps its data on your server, and you can put it behind your own reverse proxy and HTTPS.
-- **Desktop** - an Electron app for Windows, macOS and Linux. The desktop builds are **not signed**, so the operating
-  system will warn you before the first launch. If you only want to try LiveMock, prefer the web version.
-
-## 🌐 Web version
-
-### Option A - npm
+## Option A - npm
 
 The web server and its dashboard are published to npm as
 [`livemock`](https://www.npmjs.com/package/livemock), so there is nothing to clone or build. Node.js 18 or newer is
@@ -47,7 +41,7 @@ instead, or run `npm install -g livemock@latest` to upgrade a global install.
 The same command also resets the account if you lose the password: `npx livemock reset-admin <new-username>`, with the
 server stopped. See [Authentication](./auth.md#recovering-a-lost-password).
 
-### Option B - Docker
+## Option B - Docker
 
 The repository contains a `Dockerfile` and a `docker-compose.yml`, so the whole build (core types, dashboard,
 server bundle) happens inside the image:
@@ -71,7 +65,7 @@ LIVEMOCK_PORT=8100 docker compose up
 The mock ports of your projects (8088 by default) must be published separately if you want to reach them from outside
 the container.
 
-### Option C - from source
+## Option C - from source
 
 LiveMock uses Yarn workspaces. Node.js 18 or newer is required; the repository pins Yarn 4 through `corepack`.
 
@@ -118,14 +112,14 @@ If you are in China, you can set the `ELECTRON_MIRROR` environment variable to
 
 :::
 
-### Configuration
+## Configuration
 
 The web server is configured with environment variables. The full list, including the reverse-proxy settings, is on the
 [Configuration](./configuration.md) page.
 
-### Connect an AI client (optional)
+## Connect an AI client (optional)
 
-The web version also ships an MCP server, so Claude Code, Cursor, OpenCode and other AI clients can manage LiveMock
+LiveMock also ships an MCP server, so Claude Code, Cursor, OpenCode and other AI clients can manage LiveMock
 through their tools. Install it with one command, or use the manual client configuration:
 
 ```bash
@@ -136,19 +130,3 @@ npx add-mcp@2 livemock-mcp -g -a claude-code \
 
 See the [MCP server](./mcp.md) page for token creation, other clients, read-only mode and troubleshooting.
 
-## 🖥️ Desktop version
-
-Download the installer for your platform from the [release page](https://github.com/alinGmail/LiveMock/releases).
-
-| Platform | Package |
-| --- | --- |
-| Windows | `.exe` (NSIS installer) |
-| macOS | `.dmg` (Intel and Apple Silicon) |
-| Linux | `.AppImage` |
-
-The desktop builds are unsigned: Windows SmartScreen and the macOS Gatekeeper will show a warning on first launch. On
-macOS you can open the app with right-click → **Open**, or from **System Settings → Privacy & Security**.
-
-The desktop version stores its data locally, starts without a login and does not expose a web dashboard. Everything
-described in this documentation - expectations, matchers, actions, groups, the request log - works the same way in both
-versions.

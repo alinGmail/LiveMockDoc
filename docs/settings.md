@@ -11,7 +11,7 @@ The gear icon next to the account name opens the account settings page.
 
 ## Account
 
-The page shows the account that owns this instance. The web version supports exactly one account - see
+The page shows the account that owns this instance. LiveMock supports exactly one account - see
 [Authentication](./auth.md).
 
 ## Change password

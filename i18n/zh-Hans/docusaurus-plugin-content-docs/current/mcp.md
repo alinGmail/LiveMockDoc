@@ -7,12 +7,6 @@ sidebar_position: 11
 
 LiveMock 附带一个独立的 MCP server：`livemock-mcp`。借助它，Claude Code、Claude Desktop、Cursor、OpenCode 和 VS Code 等 AI 客户端无需离开编辑器就能管理项目、expectation、分组和请求记录。它通过 stdio 使用 MCP 协议，并通过正在运行的 web 实例的 `/api` 控制面(control plane)调用。
 
-:::note
-
-MCP server 只支持 **web 版**。桌面应用没有登录，也没有控制面 HTTP 服务。
-
-:::
-
 ## 环境要求
 
 - 一个正在运行的 LiveMock web 实例（默认 `http://localhost:9002`）。

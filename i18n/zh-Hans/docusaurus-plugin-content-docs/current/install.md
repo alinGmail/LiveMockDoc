@@ -5,14 +5,9 @@ sidebar_position: 2
 
 # 🛠️ 安装
 
-LiveMock 有两个形态：
+LiveMock 以自托管服务的形式运行，用浏览器打开即可：它是单个进程，数据保存在你自己的服务器上，还可以放在自己的反向代理和 HTTPS 之后。从下面的方式中选择一种即可。
 
-- **Web** —— 一个自托管服务，用浏览器打开即可。这是运行 LiveMock 的推荐方式：它是单个进程，数据保存在你自己的服务器上，还可以放在自己的反向代理和 HTTPS 之后。
-- **桌面版** —— 面向 Windows、macOS 和 Linux 的 Electron 应用。桌面版的构建**未签名**，因此操作系统会在首次启动前给出警告。如果你只是想试用 LiveMock，建议优先选择 web 版。
-
-## 🌐 Web 版
-
-### 方式 A —— npm
+## 方式 A —— npm
 
 web server 及其 dashboard 已作为 [`livemock`](https://www.npmjs.com/package/livemock) 发布到 npm，因此无需克隆或构建。需要 Node.js 18 或更高版本。
 
@@ -37,7 +32,7 @@ livemock
 
 如果你忘记了密码，同一条命令也能重置账号：在后端停止的情况下运行 `npx livemock reset-admin <new-username>`。参见[认证](./auth.md#recovering-a-lost-password)。
 
-### 方式 B —— Docker
+## 方式 B —— Docker
 
 仓库包含 `Dockerfile` 和 `docker-compose.yml`，因此整个构建（core 类型、dashboard、server bundle）都在镜像内部完成：
 
@@ -57,7 +52,7 @@ LIVEMOCK_PORT=8100 docker compose up
 
 如果要从容器外部访问项目的 mock 端口（默认 8088），需要单独发布它们。
 
-### 方式 C —— 源码
+## 方式 C —— 源码
 
 LiveMock 使用 Yarn workspaces。需要 Node.js 18 或更高版本；仓库通过 `corepack` 固定了 Yarn 4。
 
@@ -101,13 +96,13 @@ LiveMock 使用 Yarn workspaces。需要 Node.js 18 或更高版本；仓库通�
 
 :::
 
-### 配置
+## 配置
 
 web server 通过环境变量配置。完整列表（包括反向代理相关设置）见[配置](./configuration.md)页面。
 
-### 接入 AI 客户端（可选）
+## 接入 AI 客户端（可选）
 
-web 版还附带一个 MCP server，因此 Claude Code、Cursor、OpenCode 等 AI 客户端可以通过各自的工具管理 LiveMock。用一条命令安装，或使用手动客户端配置：
+LiveMock 还附带一个 MCP server，因此 Claude Code、Cursor、OpenCode 等 AI 客户端可以通过各自的工具管理 LiveMock。用一条命令安装，或使用手动客户端配置：
 
 ```bash
 npx add-mcp@2 livemock-mcp -g -a claude-code \
@@ -117,16 +112,3 @@ npx add-mcp@2 livemock-mcp -g -a claude-code \
 
 令牌创建、其他客户端、只读模式和疑难排查见 [MCP server](./mcp.md)页面。
 
-## 🖥️ 桌面版
-
-从 [release 页面](https://github.com/alinGmail/LiveMock/releases)下载对应平台的安装包。
-
-| 平台 | 安装包 |
-| --- | --- |
-| Windows | `.exe`（NSIS 安装包） |
-| macOS | `.dmg`（Intel 和 Apple Silicon） |
-| Linux | `.AppImage` |
-
-桌面版的构建未签名：Windows SmartScreen 和 macOS Gatekeeper 会在首次启动时给出警告。在 macOS 上，可以右键 → **Open** 打开应用，或前往**系统设置 → 隐私与安全性**。
-
-桌面版把数据保存在本地，启动时无需登录，也不提供 web dashboard。本文档描述的一切——expectation、matcher、action、分组、请求记录——在两个版本中的行为完全一致。

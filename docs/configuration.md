@@ -5,7 +5,7 @@ sidebar_position: 5
 
 # ⚙️ Configuration
 
-The web version is configured through environment variables. There is no configuration file to edit.
+LiveMock is configured through environment variables. There is no configuration file to edit.
 
 | Variable | Default | Description |
 | --- | --- | --- |

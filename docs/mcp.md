@@ -9,12 +9,6 @@ LiveMock ships a separate MCP server, `livemock-mcp`, so AI clients such as Clau
 OpenCode and VS Code can manage projects, expectations, groups and request logs without leaving the editor. It speaks
 MCP over stdio and calls the running web instance through its `/api` control plane.
 
-:::note
-
-The MCP server supports the **web version only**. The desktop app has no login and no control-plane HTTP server.
-
-:::
-
 ## Requirements
 
 - A running LiveMock web instance (default `http://localhost:9002`).

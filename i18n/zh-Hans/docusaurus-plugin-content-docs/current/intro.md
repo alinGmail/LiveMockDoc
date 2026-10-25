@@ -20,7 +20,6 @@ LiveMock 是一款自托管的 mock server，用于 API 开发与测试。它会
 - **Mock this request** —— 直接从捕获的请求生成新的 expectation，包括针对其查询参数和请求体字段的 matcher。
 - **按项目划分的 mock 端口** —— 每个项目监听自己的端口，因此多个项目可以并行运行。
 - **MCP server** —— 连接 Claude Code、Cursor、OpenCode 或其他 AI 客户端，在编辑器里管理项目、expectation、分组和请求记录。
-- **Web 与桌面版** —— 同一个产品既以自托管 web dashboard 的形式发布，也以桌面应用的形式发布。
 
 ## 🧩 核心概念
 

@@ -28,7 +28,6 @@ API, records every request it receives, and lets you turn a captured request int
 - **Per-project mock port** - each project listens on its own port, so several projects can run side by side.
 - **MCP server** - connect Claude Code, Cursor, OpenCode or another AI client and manage projects, expectations,
   groups and request logs from the editor.
-- **Web and desktop** - the same product is shipped as a self-hosted web dashboard and as a desktop application.
 
 ## 🧩 Concepts
 

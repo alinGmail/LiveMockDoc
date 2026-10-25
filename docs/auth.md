@@ -5,11 +5,8 @@ sidebar_position: 3
 
 # 🔐 Authentication
 
-Authentication exists in the **web version only**. The desktop version has no login: it stores its data locally and
-opens straight into your projects.
-
-Web instances are protected by a **single account**. There are no teams and no per-project permissions - one account
-owns the instance.
+LiveMock is protected by a **single account**. There are no teams and no per-project permissions - one account owns
+the instance.
 
 ## First run
 
