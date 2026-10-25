@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">🚀 快速入门 | LiveMock</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://alingmail.github.io/LiveMockDoc/zh-Hans/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://alingmail.github.io/LiveMockDoc/zh-Hans/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://alingmail.github.io/LiveMockDoc/zh-Hans/docs/intro"><meta data-rh="true" property="og:locale" content="zh_Hans"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="zh-Hans"><meta data-rh="true" name="docsearch:language" content="zh-Hans"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="🚀 快速入门 | LiveMock"><meta data-rh="true" name="description" content="LiveMock 是一款自托管的 mock server，用于 API 开发与测试。它会返回 mock 响应、proxy 到真实 API、记录收到的每个请求，还能让你一键把捕获的请求变成 mock。"><meta data-rh="true" property="og:description" content="LiveMock 是一款自托管的 mock server，用于 API 开发与测试。它会返回 mock 响应、proxy 到真实 API、记录收到的每个请求，还能让你一键把捕获的请求变成 mock。"><link data-rh="true" rel="icon" href="/LiveMockDoc/zh-Hans/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://alingmail.github.io/LiveMockDoc/zh-Hans/docs/intro"><link data-rh="true" rel="alternate" href="https://alingmail.github.io/LiveMockDoc/docs/intro" hreflang="en"><link data-rh="true" rel="alternate" href="https://alingmail.github.io/LiveMockDoc/zh-Hans/docs/intro" hreflang="zh-Hans"><link data-rh="true" rel="alternate" href="https://alingmail.github.io/LiveMockDoc/docs/intro" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"🚀 快速入门","item":"https://alingmail.github.io/LiveMockDoc/zh-Hans/docs/intro"}]}</script><link rel="alternate" type="application/rss+xml" href="/LiveMockDoc/zh-Hans/blog/rss.xml" title="LiveMock RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/LiveMockDoc/zh-Hans/blog/atom.xml" title="LiveMock Atom Feed"><link rel="stylesheet" href="/LiveMockDoc/zh-Hans/assets/css/styles.7354573f.css">
-<script src="/LiveMockDoc/zh-Hans/assets/js/runtime~main.256241c5.js" defer="defer"></script>
+<script src="/LiveMockDoc/zh-Hans/assets/js/runtime~main.469953c8.js" defer="defer"></script>
 <script src="/LiveMockDoc/zh-Hans/assets/js/main.d13f899c.js" defer="defer"></script>
 </head>
 <body>
@@ -26,7 +26,6 @@
 <li class=""><strong>Mock this request</strong> —— 直接从捕获的请求生成新的 expectation，包括针对其查询参数和请求体字段的 matcher。</li>
 <li class=""><strong>按项目划分的 mock 端口</strong> —— 每个项目监听自己的端口，因此多个项目可以并行运行。</li>
 <li class=""><strong>MCP server</strong> —— 连接 Claude Code、Cursor、OpenCode 或其他 AI 客户端，在编辑器里管理项目、expectation、分组和请求记  录。</li>
-<li class=""><strong>Web 与桌面版</strong> —— 同一个产品既以自托管 web dashboard 的形式发布，也以桌面应用的形式发布。</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-核心概念">🧩 核心概念<a href="#-核心概念" class="hash-link" aria-label="🧩 核心概念的直接链接" title="🧩 核心概念的直接链接" translate="no">​</a></h2>
 <table><thead><tr><th>概念</th><th>说明</th></tr></thead><tbody><tr><td><strong>项目(project)</strong></td><td>一个具名的 mock server，拥有自己的端口、自己的 mock 列表和自己的请求记录。</td></tr><tr><td><strong>expectation</strong></td><td>一条规则：一组 matcher 加一个 action，再加上延迟(delay)和优先级(priority)。</td></tr><tr><td><strong>matcher</strong></td><td>针对请求某一部分的条件（method、path、header、query、param）。</td></tr><tr><td><strong>action</strong></td><td>expectation 命中后 LiveMock 要做的事：自定义响应(custom response)、proxy 或静态目录(static directory)。</td></tr><tr><td><strong>分组(group)</strong></td><td>一组具名的 expectation，共享一个优先级(priority)，可以整体关闭。</td></tr></tbody></table>
@@ -34,7 +33,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-下一步">📚 下一步<a href="#-下一步" class="hash-link" aria-label="📚 下一步的直接链接" title="📚 下一步的直接链接" translate="no">​</a></h2>
 <ul>
 <li class=""><a class="" href="/LiveMockDoc/zh-Hans/docs/install">安装</a> —— 用 <code>npx livemock</code>、Docker 或源码运行 LiveMock。</li>
-<li class=""><a class="" href="/LiveMockDoc/zh-Hans/docs/quick-start">快速开始</a> —— 从首次登录到第一个 mock 响 应。</li>
+<li class=""><a class="" href="/LiveMockDoc/zh-Hans/docs/quick-start">快速开始</a> —— 从首次登录到第一个 mock 响应。</li>
 <li class=""><a class="" href="/LiveMockDoc/zh-Hans/docs/expectation/create-an-expectation">Expectations</a>、<a class="" href="/LiveMockDoc/zh-Hans/docs/expectation/create-a-matcher">Matchers</a>、
 <a class="" href="/LiveMockDoc/zh-Hans/docs/expectation/create-an-action">Actions</a>、<a class="" href="/LiveMockDoc/zh-Hans/docs/group">Groups</a>。</li>
 <li class=""><a class="" href="/LiveMockDoc/zh-Hans/docs/request-log">请求记录</a> —— 查看、筛选并复用捕获的流量。</li>
